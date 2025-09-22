@@ -10,11 +10,11 @@ jobs:
     steps: 
       - name: before checkout actions
         run: ls
-        shell :bash     
+        shell: bash     
 
       - name: checkout steps
         uses: actions/checkout@v5
-        
+
       - name: after checkout actions
         run: ls
-        shell :bash
+        shell: bash
