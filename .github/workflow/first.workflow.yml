@@ -1,8 +1,15 @@
 name: first-workflow
 on:
+  repository_dispatch:
+    types: [test]
   push:
     branches:
       - "main"
+  pull:
+    branches:
+      - "feature"
+    types: [opened , closed]
+            
 jobs:
   first-workflow-jobs:
     name: first job
