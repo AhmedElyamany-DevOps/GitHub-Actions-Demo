@@ -5,10 +5,10 @@ on:
   push:
     branches:
       - "main"
-  pull:
+  pull_request:
     branches:
       - "feature"
-    types: [opened , closed]
+    types: [opened, closed]
             
 jobs:
   first-workflow-jobs:
