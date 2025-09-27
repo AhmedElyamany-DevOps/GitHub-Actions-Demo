@@ -2,7 +2,7 @@ name: first-workflow
 
 on:
   repository_dispatch:
-    types: [test-event]
+    types: [test]
     
   push:
     branches:
