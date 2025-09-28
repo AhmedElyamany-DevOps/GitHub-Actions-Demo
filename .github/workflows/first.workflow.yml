@@ -7,10 +7,10 @@ on:
   push:
     branches:
       - "main"
-  pull_request:
-   branches:
-     - "feature"
-   types: [opened, closed]
+  # pull_request:
+  #  branches:
+  #    - "feature"
+  #  types: [opened, closed]
             
 jobs:
   first-workflow-jobs:
@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: before checkout actions
+        if: github.ref=='refs/head/feature'
         run: ls
         shell: bash     
 
