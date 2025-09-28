@@ -1,17 +1,22 @@
 name: first-workflow
 
 on:
-  repository_dispatch:
-    types: [test]
+  # repository_dispatch:
+  #   types: [test]
     
-  push:
-    branches:
-      - "main"
+  # push:
+  #   branches:
+  #     - "main"
   # pull_request:
   #  branches:
   #    - "feature"
   #  types: [opened, closed]
-            
+   workflow_dispatch:
+     inputs:
+      versioName:
+        required: true
+        description: "this is version mame for workflow control"
+                 
 jobs:
   first-workflow-jobs:
     name: first job
